@@ -8,7 +8,6 @@ type FormaticSupportedChains = Extract<ChainId, ChainId.MAINNET | ChainId.OKTEST
 
 const CHAIN_ID_NETWORK_ARGUMENT: { readonly [chainId in FormaticSupportedChains]: string | undefined } = {
   [ChainId.MAINNET]: undefined,
-  [ChainId.OKTESTNET]: 'ok-testnet',
 }
 
 export class FortmaticConnector extends FortmaticConnectorCore {

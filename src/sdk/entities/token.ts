@@ -5,8 +5,7 @@ import { Currency } from './currency'
 import env from '../../config/env'
 
 export enum ChainId {
-  MAINNET = 64,
-  OKTESTNET = 65
+  MAINNET = 200101,
 }
 
 /**
@@ -65,16 +64,9 @@ export function currencyEquals(currencyA: Currency, currencyB: Currency): boolea
 export const WETH = {
   [ChainId.MAINNET]: new Token(
     ChainId.MAINNET,
-    env.wokt,
+    env.wada,
     18,
-    'WOKT',
-    'Wrapped OKT'
+    'WADA',
+    'Wrapped ADA'
   ),
-  [ChainId.OKTESTNET]: new Token(
-    ChainId.OKTESTNET,
-    env.wokt,
-    18,
-    'WOKT',
-    'Wrapped OKT'
-  )
 }

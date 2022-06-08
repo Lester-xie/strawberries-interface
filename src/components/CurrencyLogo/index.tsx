@@ -48,7 +48,7 @@ export default function CurrencyLogo({
   }, [currency, uriLocations])
 
   if (currency === ETHER) {
-    return <StyledCheLogo src={getTokenLogoURL(env.wokt)} size={size} style={style} />
+    return <StyledCheLogo src={getTokenLogoURL(env.wada)} size={size} style={style} />
   }
 
   return (currency as any)?.symbol ? (

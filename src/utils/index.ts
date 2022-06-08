@@ -20,8 +20,7 @@ export function isAddress(value: any): string | false {
 }
 
 const OKLINK_PREFIXES: { [chainId in ChainId]: string } = {
-  64: '',
-  65: 'okexchain-test'
+  200101: '',
 }
 
 export function getOkLinkLink(chainId: ChainId, data: string, type: 'transaction' | 'token' | 'address'): string {

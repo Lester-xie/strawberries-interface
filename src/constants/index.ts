@@ -27,8 +27,7 @@ export enum Rounding {
 }
 
 export enum ChainId {
-  MAINNET = 64,
-  OKTESTNET = 65
+  MAINNET = 200101,
 }
 
 // 各种合约地址配置
@@ -46,8 +45,8 @@ export const FACTORY_ADDRESS = env.factory
 export const INIT_CODE_HASH = env.init_code_hash
 
 
-export const WETHMAINNET = env.wokt
-export const WETHTESTNET = env.wokt
+export const WETHMAINNET = env.wada
+export const WETHTESTNET = env.wada
 
 export const KLPNAME = 'Cherry LPs'
 export const KLPSYMBOL = 'Che-LP'
@@ -56,13 +55,6 @@ export const WETH = {
   [ChainId.MAINNET]: new Token(
     ChainId.MAINNET,
     WETHMAINNET,
-    18,
-    'WOKT',
-    'Wrapped OKT'
-  ),
-  [ChainId.OKTESTNET]: new Token(
-    ChainId.OKTESTNET,
-    WETHTESTNET,
     18,
     'WOKT',
     'Wrapped OKT'
@@ -106,7 +98,6 @@ export const ETHK = new Token(ChainId.MAINNET, '0x2170ed0880ac9a755fd29b2688956b
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
-  [ChainId.OKTESTNET]: [WETH[ChainId.OKTESTNET]]
 }
 
 // used to construct intermediary pairs for trading
